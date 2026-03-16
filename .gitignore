@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyc
+*.pyo
+
+# ROS 2 / Colcon build artifacts
+install/
+build/
+log/
+*.log
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Distribution / packaging
+.Python
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# Testing
+.tox/
+.coverage
+htmlcov/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
