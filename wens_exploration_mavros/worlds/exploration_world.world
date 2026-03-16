@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="exploration_world">
+
+    <!-- ===== Physics ===== -->
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.3</sor>
+        </solver>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <!-- ===== Scene ===== -->
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+    </scene>
+
+    <!-- ===== Sun ===== -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ===== Ground plane ===== -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- ===== Obstacle 1 – box ===== -->
+    <model name="box_obstacle_1">
+      <static>true</static>
+      <pose>10 10 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>2 2 2</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>2 2 2</size></box></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Obstacle 2 – cylinder ===== -->
+    <model name="cylinder_obstacle_1">
+      <static>true</static>
+      <pose>-5 8 1.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>1.0</radius><length>3.0</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>1.0</radius><length>3.0</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Obstacle 3 – tall building ===== -->
+    <model name="building_1">
+      <static>true</static>
+      <pose>15 -5 5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>4 4 10</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>4 4 10</size></box></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

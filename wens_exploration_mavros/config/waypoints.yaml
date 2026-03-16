@@ -1,0 +1,23 @@
+# WENS Pre-defined Waypoints
+# These are local-frame (ENU) positions in metres relative to the home position.
+
+# Tolerance for reaching each waypoint (metres)
+waypoint_tolerance: 0.5
+
+# Time to hover at each waypoint (seconds)
+hover_time: 3.0
+
+# Default altitude if a waypoint does not specify z (metres)
+default_altitude: 3.0
+
+# Waypoint list – x, y, z in metres (ENU, relative to home)
+waypoints:
+  - {x:  0.0, y:  0.0, z: 3.0}
+  - {x:  5.0, y:  0.0, z: 3.0}
+  - {x: 10.0, y:  0.0, z: 3.0}
+  - {x: 10.0, y:  5.0, z: 3.0}
+  - {x:  5.0, y:  5.0, z: 3.0}
+  - {x:  0.0, y:  5.0, z: 3.0}
+  - {x:  0.0, y: 10.0, z: 3.0}
+  - {x:  5.0, y: 10.0, z: 3.0}
+  - {x: 10.0, y: 10.0, z: 3.0}

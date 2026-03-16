@@ -1,0 +1,24 @@
+# WENS Exploration Parameters
+# These parameters are loaded by the exploration_node
+
+# Altitude at which the drone performs coverage exploration (metres)
+exploration_altitude: 5.0
+
+# Altitude to take off to before starting exploration (metres)
+takeoff_altitude: 3.0
+
+# Spacing between lawnmower rows/columns (metres)
+grid_spacing: 5.0
+
+# Number of rows and columns in the coverage grid
+grid_rows: 4
+grid_cols: 4
+
+# Distance threshold (metres) to consider a waypoint reached
+waypoint_tolerance: 0.5
+
+# Time (seconds) to hover at each waypoint
+hover_time: 2.0
+
+# Battery percentage at which the drone will return to launch
+battery_return_threshold: 20.0
