@@ -1,0 +1,17 @@
+# WENS Exploration - Example Waypoints for Coverage Mission
+# Used by waypoint_navigator.py when loaded via waypoint_file parameter
+#
+# Format: list of waypoints with x, y, z (meters) in local frame
+# z is optional; if omitted, default_altitude from launch file is used
+
+waypoints:
+  - {x:  0.0, y:  0.0, z: 2.5}    # Home position
+  - {x:  5.0, y:  0.0, z: 2.5}    # Waypoint 1
+  - {x:  5.0, y:  5.0, z: 2.5}    # Waypoint 2
+  - {x:  0.0, y:  5.0, z: 2.5}    # Waypoint 3
+  - {x: -5.0, y:  5.0, z: 2.5}    # Waypoint 4
+  - {x: -5.0, y:  0.0, z: 2.5}    # Waypoint 5
+  - {x: -5.0, y: -5.0, z: 2.5}    # Waypoint 6
+  - {x:  0.0, y: -5.0, z: 2.5}    # Waypoint 7
+  - {x:  5.0, y: -5.0, z: 2.5}    # Waypoint 8
+  - {x:  0.0, y:  0.0, z: 2.5}    # Return home

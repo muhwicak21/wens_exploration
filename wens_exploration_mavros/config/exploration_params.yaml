@@ -1,0 +1,39 @@
+# WENS Exploration - Exploration Parameters
+# Used by exploration_controller.py and exploration_manager
+
+exploration:
+  # Takeoff and flight parameters
+  takeoff_altitude: 2.5          # meters above ground
+  exploration_timeout: 300.0     # seconds before returning home
+  hover_duration: 2.0            # seconds to hover at each frontier
+
+  # Navigation tolerances
+  waypoint_tolerance: 0.5        # meters - acceptable distance to waypoint
+  max_velocity: 1.5              # m/s maximum velocity
+
+  # Exploration area bounds (meters, in local frame)
+  area:
+    x_min: -15.0
+    x_max:  15.0
+    y_min: -15.0
+    y_max:  15.0
+
+  # Mission type: frontier | coverage | random
+  mission_type: frontier
+
+frontier_detector:
+  # Altitude for frontier goals
+  exploration_altitude: 2.5      # meters
+  min_frontier_size: 3           # minimum unknown neighbors to qualify as frontier
+  publish_rate: 1.0              # Hz - how often to publish frontier goals
+
+octomap:
+  resolution: 0.2                # meters - OctoMap voxel size
+  max_range: 8.0                 # meters - sensor max range
+  frame_id: map
+
+mavros:
+  # OFFBOARD stream rate (must be > 2Hz)
+  setpoint_rate: 20.0            # Hz
+  # Re-arm/mode-switch throttle
+  request_interval: 5.0          # seconds
