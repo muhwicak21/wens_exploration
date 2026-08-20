@@ -1,0 +1,16 @@
+experiment:
+  exploration_mode: frontier_hgrid_role
+  experiment_seed: 1
+  target_coverage: 0.95
+  coverage_hold_time: 5.0
+  max_duration: 600.0
+result:
+  success: true
+  completion_reason: TARGET_COVERAGE_REACHED
+  exploration_time: 71.02734446525574
+  final_coverage: 0.9885333333333334
+  time_to_80_percent: 54.010418176651
+  time_to_90_percent: 62.49900984764099
+  time_to_95_percent: 66.02659320831299
+  start_timestamp: 1781443488.713576
+  end_timestamp: 1781443559.7409205

@@ -1,0 +1,5 @@
+mode,success,exploration_time,final_coverage,result_dir
+frontier,False,78.920900345,0.473355556,/root/catkin_ws/src/eval/results/20260614_220125_frontier_seed_1
+frontier_separation,True,91.19892477989197,0.9961222222222222,/root/catkin_ws/src/eval/results/20260614_222004_frontier_separation_seed_1
+frontier_hgrid,True,73.1874451637268,0.9781,/root/catkin_ws/src/eval/results/20260614_222242_frontier_hgrid_seed_1
+frontier_hgrid_role,True,71.02734446525574,0.9885333333333334,/root/catkin_ws/src/eval/results/20260614_222448_frontier_hgrid_role_seed_1

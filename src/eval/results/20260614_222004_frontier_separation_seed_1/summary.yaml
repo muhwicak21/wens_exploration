@@ -1,0 +1,16 @@
+experiment:
+  exploration_mode: frontier_separation
+  experiment_seed: 1
+  target_coverage: 0.95
+  coverage_hold_time: 5.0
+  max_duration: 600.0
+result:
+  success: true
+  completion_reason: TARGET_COVERAGE_REACHED
+  exploration_time: 91.19892477989197
+  final_coverage: 0.9961222222222222
+  time_to_80_percent: 64.18982577323914
+  time_to_90_percent: 79.27981853485107
+  time_to_95_percent: 86.19749736785889
+  start_timestamp: 1781443204.9343607
+  end_timestamp: 1781443296.1332855

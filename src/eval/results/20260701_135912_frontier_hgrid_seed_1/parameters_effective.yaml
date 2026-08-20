@@ -1,0 +1,135 @@
+source: /swarm_exploration_node
+parameters:
+  /swarm_exploration_node:
+    ros__parameters:
+      active_collaboration: true
+      collab_assigner:
+        active: true
+        dist_collision: 5.0
+        dist_range: 15.0
+        w_collision: 0.3
+        w_range: 0.7
+      collector:
+        label_penalty: 15.0
+        min_dist_collision: 5.0
+        min_vel: 0.7
+        velocity_factor: 2.0
+        w_direction: 1.0
+        w_distance: 3.0
+        w_others: 1.0
+        w_previous_goal: 3.0
+      communication_range: 100000.0
+      default_goal_z: 1.0
+      drone_num: 4
+      enable_hgrid: true
+      enable_multi_drone_separation: true
+      enable_racer_visualizer: true
+      enable_role_assignment: false
+      exploration:
+        am: 1.5
+        init_plan_num: 2
+        max_decay: 0.8
+        refine_local: true
+        refined_num: 7
+        refined_radius: 5.0
+        top_view_num: 15
+        vm: 1.5
+        w_dir: 1.5
+        yd: 1.3962634016
+        ydd: 1.5707963268
+      explored_downsample: 1
+      explorer:
+        ftr_max_distance: 6.0
+        label_penalty: 0.0
+        max_ang_dist: 0.5235987756
+        w_direction: 10.0
+        w_distance: 0.0
+        w_others: 1.0
+        w_previous_goal: 1.0
+      frame_id: world
+      free_value: 0
+      frontier:
+        candidate_dphi: 0.2617993878
+        candidate_rmax: 1.5
+        candidate_rmin: 1.0
+        candidate_rnum: 3
+        cluster_min: 10
+        cluster_size_xy: 2.0
+        cluster_size_z: 10.0
+        down_sample: 1
+        min_candidate_clearance: 0.41
+        min_candidate_dist: 0.5
+        min_view_finish_fraction: 0.2
+        min_visib_num: 30
+      goal_reached_threshold: 0.8
+      goal_timeout: 20.0
+      map_margin: 1.0
+      map_size_x: 45.0
+      map_size_y: 20.0
+      map_size_z: 5.0
+      map_source:
+        cloud_topic: /map_generator/global_cloud
+        grid_cloud_topic_suffix: grid/grid_map/occupancy_inflate
+        local_cloud_topic_suffix: pcl_render_node/cloud
+        occupancy_grid_topic: /swarm_exploration/occupancy_grid
+        occupied_max_z: 5.0
+        occupied_min_z: 0.05
+        odom_topic_suffix: visual_slam/odom
+        resolution: 0.1
+        sensing_radius: 5.0
+      map_source_type: pointcloud
+      map_topic: /swarm_exploration/occupancy_grid
+      max_goal_distance: 100.0
+      min_goal_distance: 1.0
+      min_goal_separation: 3.0
+      min_z: 0.8
+      occupied_downsample: 1
+      occupied_threshold: 50
+      odom_topic_prefix: /drone_
+      odom_topic_suffix: visual_slam/odom
+      partitioning:
+        consistent_cost: -5.0
+        consistent_cost2: 8.0
+        grid_size: 10.0
+        min_free: 3000
+        min_frontier: 100
+        min_unknown: 4000
+        use_swarm_tf: true
+        w_unknown: 0.0
+      perception_utils:
+        left_angle: 0.69222
+        max_dist: 4.5
+        right_angle: 0.68901
+        top_angle: 0.56125
+        vis_dist: 1.0
+      potential_field:
+        d0: 5.0
+        dc: 2.0
+        df: 6.0
+        ka: 1.0
+        kr: 1.0
+      publish_explored_cloud: true
+      publish_occupied_cloud: true
+      publish_only_when_reached: true
+      publish_period: 0.5
+      publish_unknown_cloud: true
+      qos_overrides:
+        /parameter_events:
+          publisher:
+            depth: 1000
+            durability: volatile
+            history: keep_last
+            reliability: reliable
+      role_assigner:
+        cluster_xy_size: 3.0
+        fix_role: 0
+        fixed: false
+        min_num_islands: 4
+        min_num_neighbours: 3
+        min_num_trails: 1
+        region_size: 8.0
+      unknown_downsample: 2
+      unknown_value: -1
+      use_sim_time: false
+      visualization_period: 0.5
+      visualization_z: 0.05

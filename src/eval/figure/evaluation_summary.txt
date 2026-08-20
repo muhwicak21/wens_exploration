@@ -1,0 +1,10 @@
+Exploration Evaluation Summary
+
+Final coverage [%]: 73.853623
+Time to target coverage [s]: nan
+Total distance [m]: 330.299950
+Jain fairness index: 0.908618
+Workload imbalance: 0.537198
+Total assigned goals: 37.000000
+Total reached goals: 34.000000
+Total failed goals: 3.000000
